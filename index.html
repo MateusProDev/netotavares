@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neto Tavares - Passeios e Transfer no Ceará</title>
+    <meta name="description" content="Neto Tavares - Agência de turismo especializada em passeios e transfers no Ceará. Conheça as praias paradisíacas, dunas e destinos incríveis do Ceará com total segurança e conforto.">
+    <meta name="keywords" content="turismo ceará, passeios ceará, transfer ceará, fortaleza, jericoacoara, canoa quebrada, turismo">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%2300a8cc'/><path d='M20 25h24v14H20z' fill='white'/><circle cx='32' cy='32' r='3' fill='%2300a8cc'/></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="nav-brand-text">Neto Tavares</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#destinations" class="nav-link">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+                <div class="hero-content">
+                    <h1 class="hero-title">Descubra as Maravilhas do Ceará</h1>
+                    <p class="hero-subtitle">Passeios inesquecíveis pelas praias paradisíacas e destinos únicos do Ceará</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">Nossos Serviços</a>
+                        <a href="#contact" class="btn btn-outline">Entre em Contato</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+                <div class="hero-content">
+                    <h1 class="hero-title">Jericoacoara te Espera</h1>
+                    <p class="hero-subtitle">Experimente o pôr do sol mais famoso do Brasil em uma das praias mais belas do mundo</p>
+                    <div class="hero-buttons">
+                        <a href="#destinations" class="btn btn-primary">Ver Destinos</a>
+                        <a href="#contact" class="btn btn-outline">Reservar Agora</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+                <div class="hero-content">
+                    <h1 class="hero-title">Transfer com Conforto e Segurança</h1>
+                    <p class="hero-subtitle">Chegue ao seu destino com total comodidade e tranquilidade</p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary">Ver Transfers</a>
+                        <a href="#contact" class="btn btn-outline">Solicitar Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="hero-controls">
+            <button class="hero-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="hero-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+            <button class="hero-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Oferecemos experiências únicas com total segurança e conforto</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3 class="service-title">Passeios para Praias</h3>
+                    <p class="service-description">Descubra as mais belas praias do Ceará com guias especializados e transporte confortável.</p>
+                    <div class="service-features">
+                        <span class="feature">• Guia especializado</span>
+                        <span class="feature">• Transporte incluído</span>
+                        <span class="feature">• Paradas estratégicas</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="service-title">Transfer Aeroporto</h3>
+                    <p class="service-description">Transfers executivos do aeroporto para hotéis e vice-versa com total pontualidade.</p>
+                    <div class="service-features">
+                        <span class="feature">• Veículos executivos</span>
+                        <span class="feature">• Motorista profissional</span>
+                        <span class="feature">• Monitoramento de voos</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="service-title">Turismo de Aventura</h3>
+                    <p class="service-description">Aventuras nas dunas, kitesurf, buggy e muito mais em destinos paradisíacos.</p>
+                    <div class="service-features">
+                        <span class="feature">• Equipamentos incluídos</span>
+                        <span class="feature">• Instrutores qualificados</span>
+                        <span class="feature">• Seguro de viagem</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-title">Turismo em Grupo</h3>
+                    <p class="service-description">Pacotes especiais para grupos com itinerários personalizados e preços diferenciados.</p>
+                    <div class="service-features">
+                        <span class="feature">• Roteiros customizados</span>
+                        <span class="feature">• Preços especiais</span>
+                        <span class="feature">• Acompanhamento completo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Destinos Imperdíveis</h2>
+                <p class="section-subtitle">Conheça os locais mais incríveis que o Ceará tem a oferecer</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                        <div class="destination-overlay">
+                            <div class="destination-info">
+                                <h3 class="destination-name">Jericoacoara</h3>
+                                <p class="destination-description">Vila de pescadores com dunas, lagoas azuis e o famoso pôr do sol na Pedra Furada.</p>
+                                <div class="destination-highlights">
+                                    <span class="highlight">Pôr do sol</span>
+                                    <span class="highlight">Dunas</span>
+                                    <span class="highlight">Kitesurf</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                        <div class="destination-overlay">
+                            <div class="destination-info">
+                                <h3 class="destination-name">Canoa Quebrada</h3>
+                                <p class="destination-description">Falésias coloridas, praia paradisíaca e a famosa lua e estrela na areia.</p>
+                                <div class="destination-highlights">
+                                    <span class="highlight">Falésias</span>
+                                    <span class="highlight">Buggy</span>
+                                    <span class="highlight">Broadway</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                        <div class="destination-overlay">
+                            <div class="destination-info">
+                                <h3 class="destination-name">Fortaleza</h3>
+                                <p class="destination-description">Capital vibrante com praias urbanas, vida noturna agitada e rica cultura local.</p>
+                                <div class="destination-highlights">
+                                    <span class="highlight">Iracema</span>
+                                    <span class="highlight">Centro Dragão</span>
+                                    <span class="highlight">Mercados</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')">
+                        <div class="destination-overlay">
+                            <div class="destination-info">
+                                <h3 class="destination-name">Cumbuco</h3>
+                                <p class="destination-description">Paraíso do kitesurf com lagoas de águas cristalinas e dunas móveis.</p>
+                                <div class="destination-highlights">
+                                    <span class="highlight">Kitesurf</span>
+                                    <span class="highlight">Lagoas</span>
+                                    <span class="highlight">Esquibunda</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Por que escolher a Neto Tavares?</h2>
+                    <p class="about-description">
+                        Com mais de 10 anos de experiência no turismo cearense, a Neto Tavares se destaca pela excelência 
+                        em atendimento e conhecimento profundo dos destinos mais incríveis do Ceará.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Segurança Garantida</h4>
+                                <p>Veículos revisados, motoristas experientes e seguro para todos os passeios.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Excelência em Serviço</h4>
+                                <p>Atendimento personalizado e guias especializados em cada destino.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Pontualidade</h4>
+                                <p>Horários rigorosamente cumpridos para otimizar seu tempo de viagem.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Amor pelo Ceará</h4>
+                                <p>Paixão genuína pela nossa terra e cultura, transmitida em cada passeio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Anos de Experiência</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">Clientes Satisfeitos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Destinos Atendidos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Fale Conosco</h2>
+                <p class="section-subtitle">Entre em contato e planeje sua próxima aventura no Ceará</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(85) 98651-8089</p>
+                            <p>(85) 99746-5640</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+55 (85) 99746-5640</p>
+                            <a href="https://wa.me/5585997465640" target="_blank" class="btn-whatsapp-contact"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>contato@netotavares.com.br</p>
+                            <p>reservas@netotavares.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Beach Park - Porto das Dunas</p>
+                            <p>Aquiraz - CE</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 08h às 18h</p>
+                            <p>Sábado: 08h às 14h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span>Neto Tavares</span>
+                    </div>
+                    <p class="footer-description">
+                        Sua agência de turismo especializada em experiências únicas no Ceará.
+                        Descubra as maravilhas da terra da luz com Neto Tavares!
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/vcturpasseiosetrasnfer" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/vcturpasseiosetransfernoceara/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5585997465640" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Serviços</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Passeios para Praias</a></li>
+                        <li><a href="#services">Transfer Aeroporto</a></li>
+                        <li><a href="#services">Turismo de Aventura</a></li>
+                        <li><a href="#services">Turismo em Grupo</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Destinos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#destinations">Jericoacoara</a></li>
+                        <li><a href="#destinations">Canoa Quebrada</a></li>
+                        <li><a href="#destinations">Fortaleza</a></li>
+                        <li><a href="#destinations">Cumbuco</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contato</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> (85) 98651-8089</p>
+                        <p><i class="fab fa-whatsapp"></i> (85) 99746-5640</p>
+                        <p><i class="fas fa-envelope"></i> contato@netotavares.com.br</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Beach Park - Aquiraz, CE</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Neto Tavares - Passeios e Transfer. Todos os direitos reservados.</p>
+                    <div class="footer-links-bottom">
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5585997465640" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
