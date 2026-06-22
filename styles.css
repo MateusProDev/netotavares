@@ -897,13 +897,16 @@ body {
         backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: top 0.3s ease;
         padding: 2rem;
         box-shadow: 0 10px 30px rgba(21, 101, 192, 0.12);
+        z-index: 1000;
+        opacity: 0;
     }
 
     .nav-menu.active {
         top: 70px;
+        opacity: 1;
     }
 
     .nav-menu li {
