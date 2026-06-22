@@ -284,8 +284,8 @@ document.addEventListener('DOMContentLoaded', initLazyLoading);
 
 // WhatsApp Integration
 function openWhatsApp(message = '') {
-    const phone = '5585986518089'; // Replace with actual phone number
-    const defaultMessage = 'Olá! Gostaria de mais informações sobre os passeios da Neto Tavares.';
+    const phone = '5585997465640'; // Replace with actual phone number
+    const defaultMessage = 'Olá! Gostaria de mais informações sobre os passeios da Neto Táxi Beach Park.';
     const finalMessage = message || defaultMessage;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(finalMessage)}`;
     window.open(url, '_blank');
@@ -393,5 +393,5 @@ document.addEventListener('error', function(e) {
 }, true);
 
 // Console welcome message
-console.log('%c🏖️ Neto Tavares - Bem-vindo ao paraíso!', 'color: #1565C0; font-size: 16px; font-weight: bold;');
+console.log('%c🏖️ Neto Táxi Beach Park - Bem-vindo ao paraíso!', 'color: #1565C0; font-size: 16px; font-weight: bold;');
 console.log('%cSite desenvolvido com amor para mostrar as belezas do Ceará!', 'color: #0056b3; font-size: 12px;');
