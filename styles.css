@@ -912,6 +912,8 @@ body {
 
     .nav-toggle {
         display: flex;
+        z-index: 1001;
+        position: relative;
     }
 
     .nav-toggle.active .bar:nth-child(2) {
