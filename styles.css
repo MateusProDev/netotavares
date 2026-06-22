@@ -88,6 +88,13 @@ body {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link i {
+    font-size: 1rem;
 }
 
 .nav-link:hover {
@@ -883,21 +890,20 @@ body {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        left: -100%;
-        top: 70px;
+        top: -100%;
+        left: 0;
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.97);
         backdrop-filter: blur(10px);
         width: 100%;
-        text-align: left;
-        padding-left: 2rem;
+        text-align: center;
         transition: 0.3s;
         padding: 2rem;
         box-shadow: 0 10px 30px rgba(21, 101, 192, 0.12);
     }
 
     .nav-menu.active {
-        left: 0;
+        top: 70px;
     }
 
     .nav-menu li {
@@ -956,7 +962,7 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
-        text-align: center;
+        text-align: left;
     }
 
     .footer-bottom-content {
