@@ -621,14 +621,15 @@ body {
 .map-container iframe {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 400px;
-    min-height: 300px;
+    height: 500px;
+    aspect-ratio: 16/9;
 }
 
 @media (max-width: 768px) {
     .map-container iframe {
-        height: 300px;
-        min-height: 250px;
+        height: auto;
+        aspect-ratio: 1/1;
+        min-height: 300px;
     }
 }
 
