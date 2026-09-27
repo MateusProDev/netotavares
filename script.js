@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeroSlider();
     initScrollAnimations();
     initSmoothScroll();
+    initHeaderScroll();
+    initLazyLoading();
 });
 
 // Mobile Menu Toggle
@@ -71,14 +73,14 @@ function initScrollToTop() {
 function initHeroSlider() {
     if (heroSlides.length > 0) {
         // Auto slide
-        slideInterval = setInterval(nextSlide, 5000);
+        slideInterval = setInterval(nextSlide, 5500);
 
         // Previous button
         if (heroPrevBtn) {
             heroPrevBtn.addEventListener('click', function() {
                 clearInterval(slideInterval);
                 prevSlide();
-                slideInterval = setInterval(nextSlide, 5000);
+                slideInterval = setInterval(nextSlide, 5500);
             });
         }
 
@@ -87,7 +89,7 @@ function initHeroSlider() {
             heroNextBtn.addEventListener('click', function() {
                 clearInterval(slideInterval);
                 nextSlide();
-                slideInterval = setInterval(nextSlide, 5000);
+                slideInterval = setInterval(nextSlide, 5500);
             });
         }
 
@@ -96,7 +98,7 @@ function initHeroSlider() {
             indicator.addEventListener('click', function() {
                 clearInterval(slideInterval);
                 goToSlide(index);
-                slideInterval = setInterval(nextSlide, 5000);
+                slideInterval = setInterval(nextSlide, 5500);
             });
         });
 
@@ -108,7 +110,7 @@ function initHeroSlider() {
             });
 
             heroSection.addEventListener('mouseleave', function() {
-                slideInterval = setInterval(nextSlide, 5000);
+                slideInterval = setInterval(nextSlide, 5500);
             });
         }
     }
@@ -150,18 +152,18 @@ function updateSlide() {
 // Smooth Scroll for Navigation Links
 function initSmoothScroll() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
-    
+
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
-            
+
             if (targetSection) {
                 const headerHeight = document.querySelector('.header').offsetHeight;
                 const targetPosition = targetSection.offsetTop - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -209,37 +211,40 @@ function initScrollAnimations() {
     staggerAnimation(destinationCards);
 }
 
-
-
-// Header Scroll Effect
-window.addEventListener('scroll', function() {
+// Header Scroll Effect (toggles .scrolled — style lives in CSS)
+function initHeaderScroll() {
     const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
-    } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+    if (!header) return;
+
+    function onScroll() {
+        if (window.scrollY > 60) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
     }
-});
+
+    onScroll();
+    window.addEventListener('scroll', debounce(onScroll, 20));
+}
 
 // Active Navigation Link
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     let current = '';
     const scrollPosition = window.scrollY + 200;
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -248,23 +253,10 @@ function updateActiveNavLink() {
     });
 }
 
-window.addEventListener('scroll', updateActiveNavLink);
-
-// Parallax Effect for Hero
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero-slide');
-    const rate = scrolled * -0.5;
-
-    parallaxElements.forEach(element => {
-        element.style.transform = `translateY(${rate}px)`;
-    });
-});
-
 // Lazy Loading for Images
 function initLazyLoading() {
     const images = document.querySelectorAll('img[data-src]');
-    
+
     const imageObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -279,96 +271,7 @@ function initLazyLoading() {
     images.forEach(img => imageObserver.observe(img));
 }
 
-// Initialize lazy loading when DOM is ready
-document.addEventListener('DOMContentLoaded', initLazyLoading);
-
-// WhatsApp Integration
-function openWhatsApp(message = '') {
-    const phone = '5585997465640'; // Replace with actual phone number
-    const defaultMessage = 'Olá! Gostaria de mais informações sobre os passeios da Neto Táxi Beach Park.';
-    const finalMessage = message || defaultMessage;
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(finalMessage)}`;
-    window.open(url, '_blank');
-}
-
-// Add WhatsApp floating button
-function createWhatsAppButton() {
-    const whatsappBtn = document.createElement('a');
-    whatsappBtn.href = '#';
-    whatsappBtn.className = 'whatsapp-float';
-    whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
-    whatsappBtn.title = 'Fale conosco no WhatsApp';
-    
-    whatsappBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        openWhatsApp();
-    });
-    
-    document.body.appendChild(whatsappBtn);
-}
-
-// Add WhatsApp button styles
-const whatsappStyles = `
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 100px;
-    right: 30px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    animation: pulse 2s infinite;
-}
-
-.whatsapp-float:hover {
-    background-color: #128C7E;
-    transform: scale(1.1);
-    color: #FFF;
-    text-decoration: none;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-}
-
-@media (max-width: 768px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-        bottom: 80px;
-        right: 20px;
-    }
-}
-`;
-
-// Inject WhatsApp styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = whatsappStyles;
-document.head.appendChild(styleSheet);
-
-// Create WhatsApp button when DOM is ready
-document.addEventListener('DOMContentLoaded', createWhatsAppButton);
-
-// Performance optimization: Debounce scroll events
+// Performance optimization: Debounce scroll/resize-heavy handlers
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -393,5 +296,5 @@ document.addEventListener('error', function(e) {
 }, true);
 
 // Console welcome message
-console.log('%c🏖️ Neto Táxi Beach Park - Bem-vindo ao paraíso!', 'color: #1565C0; font-size: 16px; font-weight: bold;');
-console.log('%cSite desenvolvido com amor para mostrar as belezas do Ceará!', 'color: #0056b3; font-size: 12px;');
+console.log('%c🏖️ Neto Táxi Beach Park - Bem-vindo ao paraíso!', 'color: #0B6E8F; font-size: 16px; font-weight: bold;');
+console.log('%cSite desenvolvido para mostrar as belezas do Ceará!', 'color: #063E52; font-size: 12px;');
